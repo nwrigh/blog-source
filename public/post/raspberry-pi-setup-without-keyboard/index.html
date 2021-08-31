@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Nicky Wrightson">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://nwrigh.github.io//img/grass.jpg">
+    <meta property="twitter:image" content="http://nwrigh.github.io//img/grass.jpg" />
+    
+
+    
+    <meta name="title" content="Raspberry Pi Setup Without Keyboard" />
+    <meta property="og:title" content="Raspberry Pi Setup Without Keyboard" />
+    <meta property="twitter:title" content="Raspberry Pi Setup Without Keyboard" />
+    
+
+    
+    <meta name="description" content="Tech tinkering and general wanderings from an inquisitive mind">
+    <meta property="og:description" content="Tech tinkering and general wanderings from an inquisitive mind" />
+    <meta property="twitter:description" content="Tech tinkering and general wanderings from an inquisitive mind" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Principal Engineer, Individual contributor, Public Speaking, AWS, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Raspberry Pi Setup Without Keyboard-Nicky Wrightson&#39;s Blog</title>
+
+    <link rel="canonical" href="/post/raspberry-pi-setup-without-keyboard/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="http://nwrigh.github.io/css/main.css">
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Nicky Wrightson</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                    
+		    
+                        <li><a href="/top/books/">References</a></li>
+                    
+                        <li><a href="/top/about/">About</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/grass.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Raspberry Pi Setup Without Keyboard</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                Nicky Wrightson
+                         
+                        on 
+                        Tuesday, April 21, 2020
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>So the world has been hit with this awful pandemic and I could easily descend into the depth of depression. However I made myself a promise - I would constantly look at ways to be creative, get this blog live is one of those projects. Alongside this though I want to make a dress, make ramen from scratch and something technical. This is where my journey with the raspberry pi starts. I may have some inspiration from QCon talk I saw at the start of march about running machine learning models on raspberry pi and other IOT devices (I can&rsquo;t find the talk at the moment but will dig around for it later). I thought tackling machine learning as the first project might be a little abitious though. While holding off on a mental shopping spree without a plan inspiration hit me. So we loving attracting birds to our flat (amazing variety for central london) but our perspex feeder on our lounge window is the least visited feeding station. One day last week I decided to clean it up and restock anyway. I put some big fat balls in there and they were completely gone the following day. I have no idea what around me could eat or carry off any entire fat ball - I need a motion camera setup!</p>
+<p><img src="/img/posts/bird_feeder.jpg" alt="Bird Feeder"></p>
+<h1 id="shopping-spree">Shopping Spree</h1>
+<p>So I found this great blog post that I thought would give me a great starting place - <a href="https://www.bouvet.no/bouvet-deler/utbrudd/building-a-motion-activated-security-camera-with-the-raspberry-pi-zero">Building a Motion Activated Security Camera with the Raspberry Pi Zero</a>. However when I started looking at the shopping list I got a little carried away. Mark used a raspberry pi zero, so I also looked for one but they were about £20 and a full blown raspberry pi 4 wasn&rsquo;t all that much more. Also the geek in me thought going for the 4 meant that I still had my machine learning IOT dreams.</p>
+<ul>
+<li>Raspberry pi 4 approx £33
+<ul>
+<li>The great thing with this over the zero was all the extra stuff included. WiFi, sound, Bluetooth, full sized USB and ethernet port</li>
+</ul>
+</li>
+<li>Mini HDMI adapter approx £3 (optional)
+<ul>
+<li>This is to hook up to a monitor</li>
+</ul>
+</li>
+<li>Camera module
+<ul>
+<li>I just got <a href="https://www.ebay.co.uk/itm/313034575751">this one</a> off eBay, mainly because it was cheap and had quick delivery</li>
+</ul>
+</li>
+<li><a href="https://www.ebay.co.uk/itm/263111646458">Camera Mount</a> (optional)
+<ul>
+<li>I thought it gave me more options plus the camera looked so dinky and unprotected</li>
+</ul>
+</li>
+<li>You will need a micro sd card too, I have a gopro obsession so I had plenty knocking around even though I needed only a 16GB one I used a 32GB</li>
+<li>I bought some (double sided suckers)[https://www.amazon.co.uk/NUOLUX-Double-Suction-Sucker-Plastic/dp/B00ZWSBCX4] too to attach the pi to the window</li>
+<li>One last thing was a case for the raspberry pi - this and the suckers are completly optional though</li>
+</ul>
+<p>That&rsquo;s it &hellip;. Or is &hellip;.</p>
+<h1 id="face-palm-moment">Face palm moment</h1>
+<p>Who has a USB keyboard nowadays? But the raspberry pi 4 has bluetooth, oh but how do I turn it on and connect? DOH!</p>
+<p>Double DOH! especially as I only needed to run a handful of commands to either connect my keyboard via bluetooth!</p>
+<p>SSH?
+Well recent releases of Raspbian has SSH disabled by default. I refuse to spend any more cash on this pet project so I did some digging.</p>
+<h1 id="enabling-ssh-by-default">Enabling SSH by default</h1>
+<p>First off we can&rsquo;t use <a href="https://www.raspberrypi.org/documentation/installation/noobs.md">New Out Of Box Software (NOOBS)</a> because you need to select the OS. So I need to get the bare Raspbian image from <a href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a>. I chose &ldquo;Raspbian Buster with desktop&rdquo;</p>
+<p>I formatted the SD card and then I flashed the image onto it by using <code>dd</code>, more information can be found on the (raspberry pi website)[https://www.raspberrypi.org/documentation/installation/installing-images/mac.md]</p>
+<p>I then needed to remount the sd card so that I could add what I needed to boot from SSH.</p>
+<pre><code>diskutil mountDisk /dev/diskN
+</code></pre><p>Then create an empty ssh file on the sd card:</p>
+<pre><code class="language-/" data-lang="/">/Volumes/SD32GB » touch ssh
+</code></pre><p>This should enable ssh by default now for Rasbian.</p>
+<p>I then added a file for the WiFi to connect automatically, wpa_supplicant.conf:</p>
+<pre><code class="language-ctrl_interface=DIR=/var/run/wpa_supplicant" data-lang="ctrl_interface=DIR=/var/run/wpa_supplicant">update_config=1
+country=GB
+
+network={
+    ssid=&quot;&lt;SSID&gt;&quot;
+    psk=&quot;&lt;PASSWORD&gt;&quot;
+    key_mgmt=WPA-PSK
+}
+</code></pre><p>I hooked it up to my monitor to see what was happening during the boot. The boot disk worked but of course I can&rsquo;t do anything with it yet.</p>
+<h1 id="lets-find-the-raspberry-pi-on-the-network">Let&rsquo;s find the raspberry pi on the network</h1>
+<p>I installed a utility called nmap to see what devices are on our home network</p>
+<pre><code>brew install nmap
+</code></pre><p>Now let&rsquo;s list the devices on the network</p>
+<pre><code>nmap -sn 192.168.0.1/24
+
+Nmap scan report for raspberrypi (192.168.0.13)
+Host is up (0.059s latency).
+
+</code></pre><p>woo hoo i have an ip address</p>
+<pre><code>ssh pi@192.168.0.13
+
+</code></pre><p>Default password is <code>raspberry</code> make sure the first thing you do it is change this once logged in. But wooo hoo we are able to work with our raspberry pi with no keyboard. Time to start to play &hellip;.</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:nickywrightson@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    <li>
+                        <a href="https://wwww.twitter.com/nickywrightson">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/nicky-wrightson-b2707a1/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Nicky Wrightson 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>
