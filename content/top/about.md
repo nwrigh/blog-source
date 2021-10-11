@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-date: 2021-08-31T09:19:09Z
+date: 2021-09-31T09:19:09Z
 draft: true
 ---
 
@@ -17,7 +17,7 @@ Now in the systems I help build I optimise for operability, speed of delivery an
 
 A little background drivel - I started life out at a consultancy. Then had a wild decade of contractoring globally which took me through the telcoms industry through to front-end office trading systems via some short stints in the music industry and other parts of the financial sector. I basically flip-flopped between perm and contract, learning skills then getting a contract wage from applying those. That journey is something I could write reams on in itself however I now can't really think of going back towards the contract market as I started to get passionate about aspects that I just could not fufill in contract roles.
 
-I wanted to insitigate change - whether that be technical, social, process or organisational, as a contractor that was hard. Plus I was stuck in older tech teams within the financial services sector - My mind was yet to be blow to elastic compute and how we had so much more influence we had when we were working in the cloud. 
+I wanted to insitigate change for good - whether that be technical, social, process or organisational, as a contractor that was hard. Plus I was stuck in older tech teams within the financial services sector - My mind was yet to be blow to elastic compute and how we had so much more influence we had when we were working in the cloud. 
 
 However this realisation over what I enjoyed nor what what out there would have ever happened had I not been very heavily influenced by [Sarah Wells](https://www.youtube.com/watch?v=SlvN6tbU4dk) whom I had worked with at the very start of my career. She persuaded me to try out the Financial Times .... A blurry history on and here I am.
 
