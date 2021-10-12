@@ -1,6 +1,5 @@
 ---
 title:       "Have to start somewhere"
-subtitle:    "There is always a first post for a blog"
 description: "The first post of blog - I have to start somewhere with something"
 date:        2021-10-11
 image:       "intro.jpg"

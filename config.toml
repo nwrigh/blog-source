@@ -104,10 +104,10 @@ home = ["HTML"]
 
   [[params.addtional_menus]]
   title =  "References"
-  href =  "/references/books/"
+  href =  "/top/books/"
   [[params.addtional_menus]]
   title =  "About"
-  href =  "/about/"
+  href =  "/top/about"
 
 [outputFormats.Algolia]
 baseName = "algolia"

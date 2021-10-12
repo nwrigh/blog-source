@@ -1,6 +1,5 @@
 ---
 title: "Books"
-type: "page"
 date: 2021-10-11
 draft: false
 ---
