@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2021-09-31T09:19:09Z
-draft: true
+draft: false
 ---
 
 # TLDR; 

@@ -1,7 +1,8 @@
 ---
 title: "Books"
+type: "page"
 date: 2021-09-31T09:19:09Z
-draft: true
+draft: false
 ---
 # Books
 * [Sam Newman](https://samnewman.io/)
