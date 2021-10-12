@@ -68,7 +68,7 @@ home = ["HTML"]
 
   [params.social]
   rss            = false 
-  email          = "nickywrightson@gmail.com"
+  email          = "nicky@nickywrightson.com"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
   twitter       = "https://wwww.twitter.com/nickywrightson"
