@@ -2,8 +2,9 @@
 title:       "Have to start somewhere"
 description: "The first post of blog - I have to start somewhere with something"
 date:        2021-10-11
-image:       "intro.jpg"
+image:       "img/intro.jpg"
 categories:  ["Tech"]
+tags: ["Misc", "Tech"]
 ---
 
 In August I left my role at Skyscanner to take a career break with an ambitious list of things I wanted to achieve before I started a new role. One of those items was to start a blog and get into a writing routine.

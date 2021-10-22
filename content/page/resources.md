@@ -1,7 +1,13 @@
 ---
-title: "Books"
+title: "Technical Resources"
 date: 2021-10-11
 draft: false
+
+menu: 
+    main:
+        name: Resources
+        pre: link
+        weight: -90
 ---
 # Books
 * [Sam Newman](https://samnewman.io/)

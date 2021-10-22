@@ -1,6 +1,12 @@
 ---
 title: "About Me"
 draft: false
+image: "img/sunset.jpg"
+menu: 
+    main:
+        name: About Me
+        pre: user
+        weight: -90
 ---
 
 # TLDR; 
